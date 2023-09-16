@@ -1,3 +1,6 @@
+PORTAL_URL
+PORTAL_PASSWORD
+
 name: Test the PALINDROME portal
 
 on:
