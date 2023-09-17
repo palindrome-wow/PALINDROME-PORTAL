@@ -1,6 +1,8 @@
 name: Say Hi
 
-on: pull_request
+on:
+    issues:
+        types: [closed]
 
 jobs:
   test:
