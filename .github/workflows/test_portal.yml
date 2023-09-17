@@ -1,6 +1,6 @@
 name: Test the PALINDROME portal milopeng
 on:
-    [issues, pull_request_target, commit]
+    [issues, pull_request_target, push]
 jobs:
   test:
     runs-on: windows-latest
