@@ -1,10 +1,10 @@
 name: Test the PALINDROME portal milopeng
 
-on: pull_request_target
+on: [issues, pull_request_target]
 
 jobs:
   test:
-    runs-on: self-hosted
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
       - name: Test the PALINDROME portal
