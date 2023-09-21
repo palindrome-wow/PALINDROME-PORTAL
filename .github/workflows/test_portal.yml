@@ -1,5 +1,4 @@
-name: Test the PALINDROME portal
-
+name: ff
 on:
     issues:
         types: [closed]
