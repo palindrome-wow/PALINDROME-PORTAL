@@ -1,4 +1,4 @@
-name: ff2
+name: ff2f
 on: pull_request_target
 
 jobs:
