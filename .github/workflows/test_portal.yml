@@ -1,6 +1,6 @@
 name: Test the PALINDROME portal
 
-on: [pull_request, issue_comment]
+on: [pull_request, issue_comment, issues]
 
 jobs:
   test:
