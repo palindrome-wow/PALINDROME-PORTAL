@@ -1,6 +1,6 @@
 name: TEST PLEASE
 on:
-    issues:
+    pull_request:
         types: [closed]
 
 jobs:
