@@ -1,6 +1,10 @@
 name: Test the PALINDROME portal
 
-on: [pull_request]
+on:
+    issues:
+        types: [closed]
+    push:
+        branches: [main]
 
 jobs:
   test:
