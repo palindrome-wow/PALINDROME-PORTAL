@@ -1,7 +1,7 @@
 name: TEST PLEASE
 on:
     issues:
-        types: pull_request_target
+        types: [closed]
 
 jobs:
   test:
