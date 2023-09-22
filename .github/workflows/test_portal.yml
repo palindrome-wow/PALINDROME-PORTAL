@@ -1,8 +1,6 @@
 name: Test the PALINDROME portal
 
-on:
-  issue_comment:
-    types: [created, deleted]
+on: [pull_request, issue_comment]
 
 jobs:
   test:
