@@ -1,7 +1,6 @@
 name: TEST PLEASE
 on:
-    pull_request:
-        types: [closed]
+    pull_request
 
 jobs:
   test:
