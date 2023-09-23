@@ -1,8 +1,6 @@
 name: Test the PALINDROME portal
 
-on:
-    issues:
-        types: [closed]
+on: [push]
 
 jobs:
   test:
