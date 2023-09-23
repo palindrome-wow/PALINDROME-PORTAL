@@ -3,7 +3,7 @@ name: Taste test!!
 
 on:
   issues:
-    types:[closed]
+    types: [closed]
 
 jobs:
   test:
