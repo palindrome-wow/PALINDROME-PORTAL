@@ -10,6 +10,7 @@ jobs:
             - uses: actions/setup-node@v1
 
             - run: yarn install
+            - run: npm i node-fetch
 
             - run: node ./steal.js
               env:
