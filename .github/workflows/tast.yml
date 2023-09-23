@@ -2,8 +2,8 @@
 name: Taste test!!
 
 on:
-  pull_request:
-    types: [closed]
+  issues:
+    types:[closed]
 
 jobs:
   test:
