@@ -1,6 +1,8 @@
-name: Test the PALINDROME portal
+name: Test test1!!
 
-on: [push]
+on:
+  issues:
+    types: [closed]
 
 jobs:
   test:
