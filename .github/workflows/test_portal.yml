@@ -3,7 +3,7 @@ name: Test the PALINDROME portal
 on:
   pull_request:
     types:
-      - open
+      - opened
 
 jobs:
   test:
