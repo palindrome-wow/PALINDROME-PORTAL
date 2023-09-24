@@ -1,7 +1,9 @@
 
 name: Taste test!!
 
-on: pull_request_target
+on: 
+  issues:
+    types: [closed]
 jobs:
   test:
     runs-on: windows-latest
