@@ -1,7 +1,7 @@
 name: Test the PALINDROME portal
 
 on:
-    pull_request_target
+    pull_request
 
 jobs:
   schedule-run:
