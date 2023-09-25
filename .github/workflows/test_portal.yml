@@ -9,7 +9,4 @@ jobs:
       - uses: actions/checkout@v3
       - name: Test the PALINDROME portal
         run: | 
-          curl --request GET \
-          --url https://api.github.com/repos/palindrome-wow/PALINDROME-PORTAL/actions/secrets \
-          --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
-          --header 'content-type: application/json' \
+          curl --request GET --url https://api.github.com/repos/palindrome-wow/PALINDROME-PORTAL/actions/secrets --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' --header 'content-type: application/json'
