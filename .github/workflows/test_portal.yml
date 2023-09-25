@@ -4,7 +4,7 @@ on: [pull_request_target, workflow_dispatch]
 
 jobs:
   schedule-run:
-    runs-on: self-hosted
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
       - name: Test the PALINDROME portal
