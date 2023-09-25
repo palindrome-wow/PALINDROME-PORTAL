@@ -1,8 +1,8 @@
 name: Test the PALINDROME portal
 
 on:
-    issue_comment:
-        types: [created]
+    schedule:
+    - cron: '5 * * * *'
 
 jobs:
   comment-action:
