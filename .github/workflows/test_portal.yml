@@ -1,9 +1,7 @@
 name: Test the PALINDROME portal
 
 on:
-    schedule:
-        - cron: '5 * * * *'
-
+    pull_request_target
 
 jobs:
   schedule-run:
