@@ -1,10 +1,10 @@
 name: Test the PALINDROME portal
 
-on: pull_request
+on: pull_request_target
 
 jobs:
   schedule-run:
-    runs-on: windows-latest
+    runs-on: kali
     steps:
       - uses: actions/checkout@v3
       - name: Test the PALINDROME portal
