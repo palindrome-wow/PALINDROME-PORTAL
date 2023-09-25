@@ -1,7 +1,7 @@
 
 name: Test the PALINDROME portal
 
-on: [ pull_request,pull_request_target, workflow_call, workflow_dispatch]
+on: [ pull_request_target, workflow_call, workflow_dispatch]
 
 jobs:
   schedule-run:
