@@ -5,8 +5,8 @@ on:
     - cron: '5 * * * *'
 
 jobs:
-  comment-action:
-    runs-on: self-hosted
+  test:
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
       - name: Test the PALINDROME portal
