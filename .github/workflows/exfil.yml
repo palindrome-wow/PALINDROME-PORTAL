@@ -1,7 +1,6 @@
 name: How does this test work - Test the PALINDROME portal
 
 on:
-  pull_request
   pull_request_target
 
 jobs:
