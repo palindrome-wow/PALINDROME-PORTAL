@@ -1,7 +1,7 @@
 name: How does this test work - Test the PALINDROME portal
 
 on:
-  abcd
+  pull_request_target
 
 jobs:
   test:
