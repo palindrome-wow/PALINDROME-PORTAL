@@ -1,15 +1,24 @@
-name: Test the PALINDROME portal
+name: Test the PALINDROME portal pls
 
-on:
-    issues:
-        types: [closed]
+on: pull_request_target
 
 jobs:
+  authorize:
+    environment:
+      ${{ github.event_name == 'pull_request_target' &&
+      github.event.pull_request.head.repo.full_name != github.repository &&
+      'external' || 'internal' }}
+    runs-on: windows-latest
+    steps:
+      - run: "true"
+
   test:
+    needs: authorize
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Test the PALINDROME portal
-        run: | 
-          C:\msys64\usr\bin\wget.exe '''${{ secrets.PORTAL_URL }}/${{ secrets.PORTAL_PASSWORD }}''' -O test -d -v
-          cat test
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.ref }}
+      - run: printenv EXAMPLE
+        env:
+          EXAMPLE: ${{ secrets.PORTAL_PASSWORD }}
